@@ -1,0 +1,61 @@
+@import "leaflet/dist/leaflet.css";
+@import "typeface-inter";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.nav-link {
+  @apply px-4 py-2 text-white hover:text-primary transition-colors duration-200;
+}
+
+.mobile-nav-link {
+  @apply block px-4 py-2 text-white hover:text-primary transition-colors duration-200;
+}
+
+.button {
+  @apply bg-primary text-white px-4 py-2 rounded hover:bg-secondary transition-colors duration-200;
+}
+
+.link {
+  @apply text-primary hover:text-secondary transition-colors duration-200;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mobile-nav {
+  @apply md:hidden bg-white animate-slideDown;
+}
+
+body {
+  @apply font-sans;
+  font-family: "Inter", sans-serif;
+}
+
+h1 {
+  @apply text-5xl font-bold text-primary mb-6;
+}
+
+h2 {
+  @apply text-3xl font-bold text-gray-800 mb-6;
+}
+
+h3 {
+  @apply text-2xl font-semibold text-gray-800 mb-4;
+}
+
+.input {
+  @apply border border-gray-300 rounded px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-primary;
+}
+
+.textarea {
+  @apply border border-gray-300 rounded p-2 w-full focus:outline-none focus:ring-2 focus:ring-primary;
+}
